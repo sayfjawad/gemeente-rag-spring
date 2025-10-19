@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+rag:
+  qdrant:
+    host: ${QDRANT_HOST:127.0.0.1}
+    port: ${QDRANT_PORT:6333}
+    collection: ${QDRANT_COLLECTION:gemeente_docs}
+    vectorSize: ${VECTOR_SIZE:768}
+  ollama:
+    baseUrl: ${OLLAMA_URL:http://127.0.0.1:11434}
+    embedModel: ${EMBED_MODEL:nomic-embed-text}
+    chatModel: ${CHAT_MODEL:llama3.1:8b}
